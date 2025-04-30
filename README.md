@@ -110,9 +110,9 @@ Hint 2: A threshold set at 5.33 σ, the probability that random Gaussian noise c
 
 Classical Weighted RAIM (Receiver Autonomous Integrity Monitoring) is implemented based on the Weighted Least Squares (WLS) method, which iteratively optimizes the user’s position and clock bias, and detects abnormal satellite signals. The inputs include pseudorange observations (prvec), satellite coordinates (svxyzr), carrier-to-noise ratio weights (cn0), and initial position estimates (initpos). The user's latitude, longitude and height predictions are then obtained.
 
-![](Images/a.png)
+![](https://github.com/LuoWenting99/AAE6102_Assignment2/blob/main/Images/a.png)
 
-![](Images/a.png)
+![](https://github.com/LuoWenting99/AAE6102_Assignment2/blob/main/Images/b.png)
 
 From the predicted results, the WLS-based RAIM algorithm performs well in predicting the user's accuracy and latitude. It can be seen that the predicted latitude and longitude of the user's location are almost identical to the true position, with a small error. However, there is some deviation in the predicted height. Compared to the true height of 3 meters, the average estimated height error is 2.08 meters, showing an overall good performance.
 
