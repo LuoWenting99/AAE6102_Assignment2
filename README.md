@@ -1,37 +1,80 @@
 # AAE6102_Assignment2
 # AAE6102 Assignment 2 Report
 
-## Task 1 -- Differential GNSS Positioning
+# Task 1 -- Differential GNSS Positioning
 
-### Comparison of GNSS Techniques for Smartphone Navigation
+This essay compares the pros and cons of four GNSS techniques for smartphone navigation:  
+- **Differential GNSS (DGNSS)**  
+- **Real-Time Kinematic (RTK)**  
+- **Precise Point Positioning (PPP)**  
+- **PPP-RTK**  
 
-#### Precision
-- **DGNSS**: ~1.75m horizontal, 4.5m vertical accuracy
-- **RTK**: Centimeter-level (challenging on smartphones)
-- **PPP**: Decimeter to sub-meter accuracy
-- **PPP-RTK**: Centimeter-level horizontal, decimeter vertical
+---
 
-#### Cost
-- **DGNSS**: Low cost
-- **RTK**: High cost (requires external hardware)
-- **PPP**: Moderate cost
-- **PPP-RTK**: Moderate to high cost
+## Precision
 
-#### Infrastructure Requirements
-- **DGNSS**: Needs local reference stations
-- **RTK**: Requires dense base station network
-- **PPP**: Global coverage via satellite/internet
-- **PPP-RTK**: Regional CORS networks
+### DGNSS
+- **Improvement**: Reduces horizontal errors to ~1.75 meters and vertical errors to ~4.5 meters using L5 corrections.  
+- **Limitations**: Smartphone antennas (linearly polarized) are prone to multipath interference, restricting sub-meter accuracy.  
 
-| Technique | Precision on Smartphones | Cost  | Infrastructure         | Key Pros               | Key Cons                  |
-|-----------|--------------------------|-------|------------------------|------------------------|---------------------------|
-| DGNSS     | ~1.75m horizontal        | Low   | Local reference stations | Low cost, easy to implement | Limited precision        |
-| RTK       | Centimeter-level         | High  | Local base stations    | Highest precision      | Hardware complexity      |
-| PPP       | Decimeter to sub-meter   | Moderate | Global corrections    | Global coverage        | Longer convergence       |
-| PPP-RTK   | Centimeter-level horizontal | Moderate | Regional CORS       | Combines RTK/PPP       | Emerging technology      |
+### RTK
+- **Professional Use**: Achieves 1–2 cm accuracy with stable carrier phase measurements.  
+- **Smartphone Challenges**: Unstable phase measurements lead to float solutions (>1 meter errors). Requires base stations within 10–20 km.  
 
-### Conclusion
-RTK offers highest precision but is impractical for smartphones. PPP provides global coverage while PPP-RTK emerges as promising hybrid solution.
+### PPP
+- **Global Solution**: Decimeter to sub-meter accuracy after convergence (seconds to minutes).  
+- **Drawbacks**: Lower precision than RTK; vertical accuracy less reliable.  
+
+### PPP-RTK
+- **Hybrid Performance**: Centimeter-level horizontal accuracy, decimeter vertical, ~60s convergence.  
+- **Adoption**: Early stages for smartphones due to hardware/software maturity requirements.  
+
+---
+
+## Cost
+
+| Technique | Cost Implications                                                                 |
+|-----------|-----------------------------------------------------------------------------------|
+| DGNSS     | Low cost; uses existing corrections and standard chipsets. Requires data/software. |
+| RTK       | High cost; needs external antennas, base station corrections (e.g., NTRIP).        |
+| PPP       | Moderate cost; single receiver + internet/satellite corrections. Battery/data impact. |
+| PPP-RTK   | Moderate-high cost; advanced chipsets + regional CORS networks. Emerging tech.     |
+
+---
+
+## Infrastructure Requirements
+
+| Technique | Infrastructure Needs                                                                 |
+|-----------|--------------------------------------------------------------------------------------|
+| DGNSS     | Local reference stations; limited to populated areas.                                |
+| RTK       | Dense local base stations + bidirectional comms; costly and unscalable.              |
+| PPP       | Global corrections via satellite/internet; no local infrastructure.                  |
+| PPP-RTK   | Regional CORS networks; degrades to PPP outside coverage. More scalable than RTK.    |
+
+---
+
+## Summary Table
+
+| Technique | Precision on Smartphones   | Cost    | Infrastructure               | Key Pros                          | Key Cons                          |
+|-----------|----------------------------|---------|-------------------------------|-----------------------------------|-----------------------------------|
+| DGNSS     | ~1.75 m (horizontal)       | Low     | Local reference stations      | Low cost, easy to implement       | Limited precision, coverage       |
+| RTK       | Centimeter-level (hard)    | High    | Local base stations + comms   | Highest precision                 | Complex hardware, limited coverage, costly |
+| PPP       | Decimeter to sub-meter     | Moderate| Global corrections            | Global, no base stations needed   | Longer convergence, lower precision than RTK |
+| PPP-RTK   | Centimeter (horizontal), decimeter (vertical) | Moderate-high | Regional CORS + broadcast | RTK accuracy + PPP scalability | Emerging tech, infrastructure gaps |
+
+---
+
+## Conclusion
+
+- **RTK**: Best precision but impractical for smartphones due to hardware/infrastructure.  
+- **DGNSS**: Cost-effective but limited accuracy/coverage.  
+- **PPP**: Balanced global solution with moderate accuracy.  
+- **PPP-RTK**: Future potential to combine RTK precision and PPP scalability for smartphones.  
+
+---
+
+**Model Used**: Perplexity.AI  
+**Reference Chatroom**: [GNSS Concepts Explanation](https://www.perplexity.ai/search/can-you-explain-the-basic-conc-1ctOtrgKQfKMqQZe7sQ5Bg)  
 
 ## Task 2 -- GNSS in Urban Areas
 
