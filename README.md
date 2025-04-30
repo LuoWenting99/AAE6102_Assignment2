@@ -1,6 +1,6 @@
 AAE6102 Assignment2 report
 
-**Task 1 – Differential GNSS Positioning**
+## Task 1 – Differential GNSS Positioning
 
 Write a short essay (500–1000 words) comparing the pros and cons of the following GNSS techniques for smartphone navigation:
 
@@ -63,7 +63,7 @@ PPP-RTK requires regional CORS networks similar to RTK for optimal performance b
 
 <a name="ole_link7"></a>While RTK remains the gold standard for centimeter-level accuracy, its practical application on smartphones is hindered by hardware limitations and infrastructure demands. DGNSS offers a cost-effective way to improve accuracy modestly but is limited in precision and coverage. PPP provides a scalable, global solution with moderate accuracy suitable for widespread smartphone use, and PPP-RTK emerges as a promising hybrid approach combining the strengths of RTK and PPP, poised to enable high-precision smartphone navigation as hardware and infrastructure evolve.
 
-**Task 2 – GNSS in Urban Areas**
+## Task 2 – GNSS in Urban Areas
 
 Urban areas present significant challenges to GNSS positioning due to signal blockage, multipath effects, and poor satellite visibility. In this task, you are provided with a sky mask, which indicates the elevation angle representing potential satellite visibility blockage for each corresponding azimuth angle, at the ground truth of the "Urban" environment in Assignment 1.
 
@@ -94,7 +94,7 @@ Run the improve\_urban\_pos\_with\_skymask0429.m code to get the following resul
 
 As can be seen from the table, using WLS to predict the user's location, due to factors such as building obstructions, there are significant errors in the ENU, especially in the Up direction, where the average error reaches 1875 meters. By incorporating sky mask data, the errors in all three ENU directions are effectively reduced, but the error values are still relatively large.
 
-**Task 3 – GPS RAIM (Receiver Autonomous Integrity Monitoring)**
+## Task 3 – GPS RAIM (Receiver Autonomous Integrity Monitoring)
 
 RAIM is a critical technique for detecting and excluding faulty GPS measurements. In this task, you are required to:
 
@@ -116,7 +116,7 @@ Classical Weighted RAIM (Receiver Autonomous Integrity Monitoring) is implemente
 
 From the predicted results, the WLS-based RAIM algorithm performs well in predicting the user's accuracy and latitude. It can be seen that the predicted latitude and longitude of the user's location are almost identical to the true position, with a small error. However, there is some deviation in the predicted height. Compared to the true height of 3 meters, the average estimated height error is 2.08 meters, showing an overall good performance.
 
-**Task 4 – LEO Satellites for Navigation**
+## Task 4 – LEO Satellites for Navigation
 
 <a name="ole_link8"></a><a name="ole_link9"></a><a name="ole_link10"></a>Low Earth Orbit (LEO) satellites are widely used for communication purposes but present unique challenges when utilized for navigation. Write a short essay (500–1000 words) discussing:
 
@@ -162,7 +162,7 @@ Despite these challenges, recent research and technological developments show pr
 
 In summary, while LEO communication satellites offer attractive features such as strong signals and low latency, their use for GNSS navigation faces substantial difficulties. Rapid orbital motion causes large Doppler shifts and fast-changing satellite geometry, demanding sophisticated signal processing and large constellations for continuous coverage. The lack of publicly available ephemeris and clock data from commercial operators further complicates reliable navigation. Atmospheric drag and orbital perturbations require constant orbit maintenance, and receiver design must address high dynamics and power constraints. Despite these challenges, ongoing research and innovative algorithms are progressively unlocking the potential of LEO satellites to complement and enhance traditional GNSS navigation systems, particularly in scenarios where resilience and accuracy are critical.
 
-**Task 5 – GNSS Remote Sensing**
+## Task 5 – GNSS Remote Sensing
 
 GNSS is not only used for positioning and navigation but also has significant applications in remote sensing. Write a short essay (500–1000 words) discussing the impact of GNSS in remote sensing. Please select one of the following topics covered in the lecture to discuss:
 
